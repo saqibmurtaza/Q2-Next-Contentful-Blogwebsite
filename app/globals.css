@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+ @layer base {
+    body {
+      @apply bg-gray-100 ;
+    }
+  }
+  
+  @layer components {
+    .container {
+      @apply max-w-7xl mx-auto p-8;
+    }
+    h2 {
+      @apply font-bold text-2xl;
+    }
+    .item {
+      @apply bg-white rounded-lg;
+    }
+    .item img {
+      @apply w-full h-48 object-cover rounded-t-lg;
+    }
+    .item > div {
+      @apply p-6;
+    }
+    p {
+      @apply mt-4 mb-3;
+    }
+    a {
+      @apply text-lg font-bold text-blue-800;
+    }
+    .topics {
+      @apply grid grid-cols-2 gap-6; /* Apply grid layout with 2 columns and gap */
+    }
+  
+    .topic {
+      @apply bg-white rounded-lg shadow-md p-4; /* Apply card-like appearance */
+      transition: transform 0.3s; /* Add smooth transition on hover */
+    }
+  
+    .topic:hover {
+      transform: translateY(-4px); /* Lift the card on hover */
+    }
+  }
+  
